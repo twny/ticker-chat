@@ -94,7 +94,7 @@ async function handleWidgetLoad(obj) {
     `https://api.streamelements.com/kappa/v2/channels/${obj.detail.channel.id}/`
   );
   const resJson = await res.json();
-  provder = resJson.provider;
+  provider = resJson.provider;
 }
 
 /**
