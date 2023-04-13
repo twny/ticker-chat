@@ -245,9 +245,9 @@ function replaceEmotesWithImages(text, emotes) {
   for (const emote of emotes) {
     const emotesKeys = Object.keys(emote.urls);
     // get the latest version
-    const latestVerson = emotesKeys.pop();
+    const latestVersion = emotesKeys.pop();
 
-    const emoteImg = `<img src='${emote.urls[latestVerson]}' class='emote'/>`;
+    const emoteImg = `<img src='${emote.urls[latestVersion]}' class='emote'/>`;
     message = message.replaceAll(emote.name, emoteImg);
   }
 
