@@ -238,7 +238,7 @@ function removeOldMessages() {
  * @returns {string}
  */
 function replaceEmotesWithImages(text, emotes) {
-  if (!text || (Array.isArray(emotes) && !emotes.length)) return text;
+  if (!text || !emotes || (Array.isArray(emotes) && !emotes.length)) return text;
 
   let message = text;
 
