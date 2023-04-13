@@ -1,0 +1,98 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+@import url('https://fonts.googleapis.com/css?family={{fontName}}:100,300,400,500,700,900');
+@font-face {
+font-family: 'Uni Sans Heavy CAPS';
+  src: url('https://cdn.jsdelivr.net/gh/mrboost/fonts/uni-sans.heavy-caps-webfont.woff') format('woff')
+}
+* {
+  font-family: '{{customFont}}';
+  color: {{fontColor}};
+  font-weight: {{fontWeight}};
+  text-shadow: {{textShadow}};
+}
+
+:root {
+  --bgColor: {bgColor};
+}
+
+.main-container{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 9999px;
+  height: calc({fontSize}px + 0px);
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 15px;
+  padding-right: 8px;
+  background: var(--bgColor);
+}
+
+.message-row{
+  display: inline-block;
+  bottom: 0;
+  right: 0;
+  float: right;
+  padding: 4px 4px;
+}
+
+.avatar {
+    display: inline-block;
+    margin-right: 0em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: 0px;
+    border-radius: 3px;
+}
+.badge{
+  display: inline-block;
+  margin-right: 0em;
+  position: relative;
+  height: 1em;
+  vertical-align: middle;
+  top: 1px;
+}
+
+.user-box{
+    display:inline;
+    font-size:{{fontSize}}px;
+}
+
+.hidden-box {
+  position: absolute;
+  widget: 0px;
+  opacity: 0;
+}
+.user-box > span{
+    font-size:{{fontSize}}px;
+}
+
+.user-message{
+    display:inline;
+    font-size:{{fontSize}}px;
+    word-wrap: break-word;
+}
+
+.emote {
+  display: inline-block;
+  margin-right: 0.1em;
+  position: relative;
+  height: 1.1em;
+  vertical-align: middle;
+  top: 0em;
+}
+
+.emote img {
+  display: inline-block;
+  position: relative;
+  height: 1.3em;
+  opacity: 0;
+  
+}
+
+.action{
+    font-style: italic;
+}
+
+.highlight { background-color:{highlightColor}; }
