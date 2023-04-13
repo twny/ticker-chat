@@ -208,12 +208,17 @@ function replaceEmotesWithImages(text, emotes) {
     // Sort emotes by descending start positions to avoid index shifts when replacing substrings
     const sortedEmotes = [...emotes].sort((a, b) => b.start - a.start);
 
-    let replacedText = text;
+    // Split the text into an array of characters
+    let charArray = Array.from(text);
 
     for (const emote of sortedEmotes) {
         const emoteImg = `<img alt='' src='${emote.urls['4']}' class='emote'/>`;
-        replacedText = replacedText.slice(0, emote.start) + emoteImg + replacedText.slice(emote.end + 1);
+        // Replace the character at the emote start position with the emote image
+        charArray[emote.start] = emoteImg;
+        // Remove the characters between the start and end positions of the emote
+        charArray.splice(emote.start + 1, emote.end - emote.start);
     }
 
-    return replacedText;
+    // Join the array of characters back into a string
+    return charArray.join('');
 }
