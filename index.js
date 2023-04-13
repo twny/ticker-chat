@@ -26,7 +26,7 @@ window.addEventListener("onEventReceived", function (obj) {
 });
 
 // Handle widget load
-window.addEventListener("onWidgetLoad", async (obj) => handleWidgetLoad(obj));
+window.addEventListener("onWidgetLoad", handleWidgetLoad);
 
 /**
  * Delete a single message
